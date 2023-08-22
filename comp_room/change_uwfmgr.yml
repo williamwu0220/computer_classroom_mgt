@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: change overlay size
+      ansible.windows.win_command: uwfmgr overlay set-size 40960
+    - name: change warning threshold
+      ansible.windows.win_command: uwfmgr overlay set-warningthreshold 40000

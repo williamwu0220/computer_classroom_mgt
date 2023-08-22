@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: enable uwfmgr
+      ansible.windows.win_command: uwfmgr filter enable
+    - name: reboot system
+      ansible.windows.win_reboot:

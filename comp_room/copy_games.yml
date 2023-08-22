@@ -1,0 +1,38 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: copy games
+      ansible.windows.win_copy:
+        src: "{{ item }}"
+        dest: "C:/學生專區"
+      loop:
+        - "flash_games/3D偵查篇.exe"
+        - "flash_games/檔案分類.exe"
+        - "flash_games/滑鼠打地鼠.exe"
+        - "flash_games/相片沖印店-打工達人.exe"
+        - "flash_games/粉圓龜對對碰.exe"
+        - "flash_games/超級檔案管家.exe"
+        - "flash_games/圖層大風吹.exe"
+        - "flash_games/檔案分類大考驗.exe"
+        - "flash_games/滑鼠訓練之超級版食神大賽.exe"
+        - "flash_games/神奇捕鼠人.exe"
+        - "flash_games/翻對牌.exe"
+        - "flash_games/遊戲_電腦硬體貼貼趣.exe"
+        - "flash_games/多媒體投籃賽.exe"
+        - "flash_games/消滅害蟲.exe"
+        - "flash_games/滑鼠訓練之食神大賽.exe"
+        - "flash_games/節日考考你.exe"
+        - "flash_games/解析度大考驗.exe"
+        - "flash_games/阿達兔健康操.exe"
+        - "flash_games/彈跳鼠.exe"
+        - "flash_games/滑鼠尋寶大進擊.exe"
+        - "flash_games/牙菌大作戰.exe"
+        - "flash_games/簡報找碴II.exe"
+        - "flash_games/記憶企鵝秀.exe"
+        - "flash_games/電腦拼圖王.exe"
+        - "flash_games/抓硬體.exe"
+        - "flash_games/滑鼠快點.exe"
+        - "flash_games/相片分類大考驗.exe"
+        - "flash_games/粉圓瓢蟲對對碰.exe"
+        - "flash_games/認識硬體-夜市射擊.exe"

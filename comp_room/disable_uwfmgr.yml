@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: disable uwfmgr
+      ansible.windows.win_command: uwfmgr filter disable
+    - name: reboot system
+      ansible.windows.win_command: shutdown -r -f
